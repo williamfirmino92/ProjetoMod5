@@ -1,0 +1,22 @@
+.footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	h6 {
+		font-size: 1.2rem;
+	}
+}
+
+.footer li {
+
+}
+
+.footer li a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+}

@@ -1,0 +1,63 @@
+.usuario {
+	background-color: #fcec10;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 4px 4px 5px #3B0AA875;
+
+	&:hover {
+		outline: 2px solid #3B0AA8;
+	}
+
+	&:nth-child(n) {
+		animation-name: animacao-card;
+		animation-duration: 1.5s;
+	}
+	.header, .body, .footer {
+		padding: 0 .5rem;
+	}
+
+	.header {
+		height: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 2px solid #3B0AA8;
+
+		h2 {
+			text-align: center;
+			font-size: min(20px, 6vw);
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		gap: .25rem;
+		height: 60%;
+		padding-top: .5rem;
+		border-bottom: 2px solid #3B0AA8;
+		
+		span {
+			font-weight: bold;
+		}
+	}
+
+	.footer {
+		height: 20%;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+}
+
+@keyframes animacao-card {
+	from{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	to{
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}

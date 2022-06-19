@@ -1,0 +1,63 @@
+main {
+	padding: 2rem;
+	position: relative;
+	color: #3B0AA8
+}
+
+.usuario__novo {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.usuarios {
+	margin: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+	justify-content: center;
+	grid-auto-rows: 40vh;
+	gap: 2rem;
+}
+
+.usuario {
+	background-color: #fcec10;
+	/* padding: 1rem 0; */
+	display: flex;
+	flex-direction: column;
+	box-shadow: 4px 4px 5px #3B0AA875;
+}
+.header, .body, .footer {
+	padding: 0 .5rem;
+}
+
+.header {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid #3B0AA8;
+}
+
+.header h2 {
+	text-align: center;
+	font-size: min(20px, 6vw);
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+	flex-grow: 3;
+	padding-top: .5rem;
+	border-bottom: 2px solid #3B0AA8;
+}
+
+.body span {
+	font-weight: bold;
+}
+
+.footer {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}

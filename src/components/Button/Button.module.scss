@@ -1,0 +1,52 @@
+.button {
+/* 	height: fit-content;
+	width: fit-content;
+	background-color: #3B0AA8;
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding: .5rem 5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+*/
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 10px;
+
+background: #1D31E3;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+
+}
+
+.button:hover {
+	background-color: #23006e;
+}
+
+.deletar {
+	background-color: #F53702;
+}
+
+.deletar:hover {
+	background-color: #d32f01;
+}
+
+.adicionar {
+	background-color: #111;
+	color: #fff;
+	width: 100%;
+	justify-content: center;
+	font-size: 1rem;
+}
+
+.adicionar:hover {
+	background-color: #000;
+}
+
+.btnPecas{
+	width: 100px !important; 
+}
