@@ -1,32 +1,32 @@
 import { useEffect, useState } from 'react'
 import api from '../../services/axios'
 import { useNavigate } from 'react-router-dom';
-import style from './Pecas.module.scss'
+import style from './Carros.module.scss'
 import Button from '../../components/Button';
 import { AiFillDelete } from 'react-icons/ai'
 import { AiFillEdit } from 'react-icons/ai'
 import axios from 'axios';
 import {HiUserAdd} from 'react-icons/hi'
 
-function Pecas() {
-    const [pecas, setPecas] = useState([])
+function Carros() {
+    const [pecas, setCarros] = useState([])
     const navigate = useNavigate()
 
 	const obtemPecas = async () => {
 		try {
-			const response = await api.get('/pecas')
-			const listaPecas = response.data
-			setPecas([...listaPecas])
+			const response = await api.get('/carros')
+			const listaCarros = response.data
+			setCarros([...listaCarros])
 		} catch (error) {
 			console.log(error);
 		}
 	}
 
-    const editarPeca = (id) => {
+    const editarCarros = (id) => {
 		navigate(`${id}`)
 	}
 
-    const deletarPeca = async (id) => {
+    const deletarCarros = async (id) => {
         await axios({
             method: 'delete',
             url: 'https://oficina-mecanica-resilia.herokuapp.com/pecas',
@@ -96,4 +96,4 @@ function Pecas() {
     )
 }
 
-export default Pecas
+export default Carros

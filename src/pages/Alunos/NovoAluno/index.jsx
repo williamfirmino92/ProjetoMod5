@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import style from './NovoUsuario.module.scss'
+import style from './NovoAluno.module.scss'
 import Button from '../../../components/Button';
 import api from '../../../services/axios';
 import { useNavigate } from 'react-router-dom';
 
-function NovoUsuario() {
+function NovoAluno() {
 	const navigate = useNavigate()
 	const [nome, setNome] = useState('')
 	const [email, setEmail] = useState('')
@@ -14,18 +14,18 @@ function NovoUsuario() {
 
 	const enviarDados = async (e) => {
 		e.preventDefault()
-		const response = await api.post('/usuarios', {
+		const response = await api.post('/alunos', {
 			nome,
 			email,
 			endereco,
 			cidade,
 			estado
 		})
-		response.status === 200 ? navigate('/usuarios') : setErro('Algum erro!')
+		response.status === 200 ? navigate('/alunos') : setErro('Algum erro!')
 	}	
 	return (
 		<main className={style.principal}>
-			<h2>Cadastre um novo cliente</h2>
+			<h2>Cadastre um novo aluno</h2>
 			<form action="" onSubmit={enviarDados} className={style.form}>
 				<section className={style.form__secao}>
 					<label htmlFor="nome">Digite seu nome</label>
@@ -53,4 +53,4 @@ function NovoUsuario() {
 	)
 }
 
-export default NovoUsuario
+export default NovoAluno

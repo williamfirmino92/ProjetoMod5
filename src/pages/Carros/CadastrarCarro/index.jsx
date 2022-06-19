@@ -1,9 +1,9 @@
 import React, {useState } from 'react';
-import style from './../../Usuarios/NovoUsuario/NovoUsuario.module.scss'
+import style from './../../Alunos/NovoAluno/NovoAluno.module.scss'
 import Button from '../../../components/Button';
 import axios from 'axios'
 
-function CadastraPeca(params) {
+function CadastraCarro(params) {
     const [nome, setNome] = useState('')
 	const [quantidade, setQuantidade] = useState(0)
 	const [categoria, setCategoria] = useState('')
@@ -62,4 +62,4 @@ function CadastraPeca(params) {
     )
 }
 
-export default CadastraPeca
+export default CadastraCarro

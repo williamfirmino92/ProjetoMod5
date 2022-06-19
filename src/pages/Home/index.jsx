@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import style from './Home.module.scss';
-import imagemPecas from '../../Asset/AdobeStock_95004721.jpeg'
-import imagemSeguros from '../../Asset/AdobeStock_143898014.jpeg'
+import imagemCarros from '../../Asset/AdobeStock_95004721.jpeg'
+import imagemMotos from '../../Asset/AdobeStock_143898014.jpeg'
 import imagemUsuarios from '../../Asset/AdobeStock_124784412.jpeg'
 import imagemAlunos from '../../Asset/AdobeStock_106706618.jpeg'
 import imagemFornecedores from "../../Asset/AdobeStock_140227570.jpeg"
@@ -20,19 +20,19 @@ function Home() {
 		{
 			label: 'Carros',
 			id: 0,
-			rota: '/pecas',
-			imagem: imagemPecas
+			rota: '/carros',
+			imagem: imagemCarros
 		},
 		{
 			label: 'Motos',
 			id: 1,
-			rota: '/seguros',
-			imagem: imagemSeguros
+			rota: '/carros',
+			imagem: imagemMotos
 		},
 		{
 			label: 'Alunos',
 			id: 2,
-			rota: '/usuarios',
+			rota: '/alunos',
 			imagem: imagemAlunos
 		},
 
@@ -53,7 +53,7 @@ function Home() {
 		{
 			label: 'Financeiro',
 			id: 3,
-			rota: '/fornecedores',
+			rota: '/usuarios',
 			imagem: imagemFornecedores
 		},
 		{

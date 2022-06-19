@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import style from './EditarUsuario.module.scss'
+import style from './EditarAluno.module.scss'
 import api from '../../../services/axios';
 import { useParams } from 'react-router-dom';
 import Button from '../../../components/Button';
 
-function EditarUsuario() {
+function EditarAluno() {
 
 	const {id} = useParams()
 
@@ -16,7 +16,7 @@ function EditarUsuario() {
 
 	const enviarDadosAtualizados = async (e) => {
 		e.preventDefault()
-		const response = await api.put(`/usuarios/${id}`, {
+		const response = await api.put(`/alunos/${id}`, {
 			nome,
 			email,
 			endereco,
@@ -28,7 +28,7 @@ function EditarUsuario() {
 	
 	useEffect(() => {
 		const obtemDados = async() => {
-			const response = await api.get(`/usuarios/${id}`)
+			const response = await api.get(`/alunos/${id}`)
 			const {nome, email, endereco, cidade, estado } = response.data
 			setNome(nome)
 			setEmail(email)
@@ -69,4 +69,4 @@ function EditarUsuario() {
 	)
 }
 
-export default EditarUsuario
+export default EditarAluno

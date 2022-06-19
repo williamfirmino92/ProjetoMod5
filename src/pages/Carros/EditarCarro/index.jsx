@@ -1,10 +1,10 @@
 import axios from "axios"
 import React,{ useEffect, useState } from "react"
-import style from './../../Usuarios/EditarUsuario/EditarUsuario.module.scss'
+import style from './../../Alunos/EditarAluno/EditarAluno.module.scss'
 import { useParams } from 'react-router-dom';
 import Button from '../../../components/Button';
 
-function EditarPeca() {
+function EditarCarro() {
     const [nome, setNome] = useState('')
     const [quantidade, setQuantidade] = useState(0)
     const [categoria, setCategoria] = useState('')
@@ -88,4 +88,4 @@ function EditarPeca() {
     )
 }
 
-export default EditarPeca
+export default EditarCarro

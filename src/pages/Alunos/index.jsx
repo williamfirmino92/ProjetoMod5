@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../../components/Button';
 import api from '../../services/axios'
-import style from './Usuarios.module.scss'
+import style from './Alunos.module.scss'
 import {HiUserAdd} from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom';
-import CardUsuario from '../../components/CardUsuario';
+import CardAluno from '../../components/CardAluno';
 
-function Usuarios() {
+function Alunos() {
 
-	const [usuarios, setUsuarios] = useState([])
+	const [alunos, setAlunos] = useState([])
 	const [loading, setLoading] = useState(false)
 	const [input, setInput] = useState('')
 	const [erro, setErro] = useState('')
 
 	const navigate = useNavigate()
 
-	const obtemUsuarios = async () => {
+	const obtemAlunos = async () => {
 		setErro('')
 		try {
 			setLoading(true)
-			const response = await api.get('/usuarios')
-			const listaUsuarios = response.data
-			setUsuarios([...listaUsuarios])
+			const response = await api.get('/alunos')
+			const listaAlunos = response.data
+			setAlunos([...listaAlunos])
 			setLoading(false)
 		} catch (error) {
 			console.log(error);
@@ -30,37 +30,37 @@ function Usuarios() {
 
 	const pesquisaCliente = (e) => {
 		e.preventDefault()
-		const encontraCliente = usuarios.filter(usuario => usuario.nome.toUpperCase().includes(input.toUpperCase()))
-		encontraCliente ? setUsuarios([...encontraCliente]) & setErro('') : setErro('Não encontramos alguém com este nome.') & setUsuarios([])
+		const encontraCliente = alunos.filter(alunos => alunos.nome.toUpperCase().includes(input.toUpperCase()))
+		encontraCliente ? setAlunos([...encontraCliente]) & setErro('') : setErro('Não encontramos alguém com este nome.') & setAlunos([])
 	}
 
 	const controlaInput = (valorInput) => {
-		valorInput.length === 0 ? obtemUsuarios() : setInput(valorInput)
+		valorInput.length === 0 ? obtemAlunos() : setInput(valorInput)
 	}
 
-	const deletarUsuario = async (id) => {
-		await api.delete(`/usuarios/${id}`)
-		obtemUsuarios()
+	const deletarAluno = async (id) => {
+		await api.delete(`/alunos/${id}`)
+		obtemAlunos()
 	}
 
-	const novoUsuario = () => {
+	const novoAluno = () => {
 		navigate('novo')
 	}
 
-	const editarUsuario = (id) => {
+	const editarAluno  = (id) => {
 		navigate(`${id}`)
 	}
 
 	useEffect(() => {
-		obtemUsuarios()
+		obtemAlunos ()
 	}, [])
 
 	return (
 		<main className={style.principal}>
-			<div className={style.usuario__novo}>
-				<Button adicionar={true} onClick={() => novoUsuario()}>
+			<div className={style.aluno}>
+				<Button adicionar={true} onClick={() => novoAluno()}>
 				<HiUserAdd size='18px' style={{ marginRight: '5px' }} />
-					Adicionar um novo usuário
+					Adicionar um novo aluno
 				</Button>
 			</div>
 			<form className={style.form__pesquisa} onSubmit={pesquisaCliente}>
@@ -73,13 +73,13 @@ function Usuarios() {
 			{erro && 
 				<h3>{erro}</h3>
 			}
-			<section className={style.usuarios}>
-			{usuarios.map(usuario => (
-				<CardUsuario key={usuario.id} usuario={usuario} deletarUsuario={deletarUsuario} editarUsuario={editarUsuario}/>
+			<section className={style.alunos}>
+			{alunos.map(aluno => (
+				<CardAluno key={aluno.id} aluno={aluno} deletarAluno={deletarAluno} editarAluno={editarAluno}/>
 			))}
 			</section>
 		</main>
 	)
 }
 
-export default Usuarios
+export default Alunos

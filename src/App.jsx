@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from './components/Header'
-import Usuarios from './pages/Usuarios'
-import Pecas from './pages/Pecas'
-import EditarPeca from './pages/Pecas/EditarPeca'
-import CadastrarPeca from './pages/Pecas/CadastrarPeca'
+import Alunos from './pages/Alunos'
+import Carros from './pages/Carros'
+import EditarCarro from './pages/Carros/EditarCarro'
+import CadastrarCarro from './pages/Carros/CadastrarCarro'
 import Funcionario from './pages/Funcionario'
 import Home from './pages/Home'
-import NovoUsuario from './pages/Usuarios/NovoUsuario'
+import NovoAluno from './pages/Alunos/NovoAluno'
 import NovoFuncionario from './pages/Funcionario/NovoFuncionario'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import EditarUsuario from './pages/Usuarios/EditarUsuario'
+import EditarAluno from './pages/Alunos/EditarAluno'
 import Fornecedores from './pages/Fornecedores'
 import EditFuncionario from './pages/Funcionario/EditFuncionario'
 import Footer from './components/Footer'
@@ -22,14 +22,14 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/usuarios'>
-						<Route index element={<Usuarios />} />
-						<Route path='novo' element={<NovoUsuario />} />
-						<Route path=':id' element={<EditarUsuario />} />
+					<Route path='/alunos'>
+						<Route index element={<Alunos />} />
+						<Route path='novo' element={<NovoAluno />} />
+						<Route path=':id' element={<EditarAluno/>} />
 					</Route>
-					<Route path='/pecas' element={<Pecas />}/>
-					<Route path='/pecas/novo' element={<CadastrarPeca />} />
-					<Route path='/pecas/:id' element={<EditarPeca />} />
+					<Route path='/carros' element={<Carros />}/>
+					<Route path='/carros/novo' element={<CadastrarCarro />} />
+					<Route path='/carros/:id' element={<EditarCarro />} />
 					<Route path='/fornecedores' element={<Fornecedores />} />
 					<Route path='/funcionario' element={<Funcionario />} />
 					<Route path='/funcionario/novo' element={<NovoFuncionario />} />
