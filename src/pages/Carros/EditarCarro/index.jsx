@@ -15,7 +15,7 @@ function EditarCarro() {
     const {id} = useParams()
     useEffect(() =>{
         const pegaPeca = async () => {
-            axios.get('https://oficina-mecanica-resilia.herokuapp.com/pecas/atributos')
+            axios.get('https://projeto-m4.herokuapp.com/')
                 .then(response => {
                     const peca = response.data.filter((peca) => peca.id == id)
                     console.log(peca[0])

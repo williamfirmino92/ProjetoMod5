@@ -15,7 +15,7 @@ function CadastraCarro(params) {
 
     const cadastraPeca = async (e) => {
         e.preventDefault()
-        await axios.post('https://oficina-mecanica-resilia.herokuapp.com/pecas/', {
+        await axios.post('https://projeto-m4.herokuapp.com/carros/', {
             nome: nome,
             preço: preco,
             categoria: categoria,
@@ -24,7 +24,7 @@ function CadastraCarro(params) {
             garantia: garantia
         })
 
-        window.location.href = '/pecas'
+        window.location.href = '/carros'
     }
 
     return(
