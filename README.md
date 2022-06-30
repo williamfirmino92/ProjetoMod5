@@ -12,6 +12,8 @@ O projeto é a conclusão de aprendizados do módulo V da RESÍLIA EDUCAÇÃO. N
 
 📌 Link do site aonde extraimos as fotos : https://unsplash.com/
 
+📌 Link do site aonde extraimos o favicon :https://www.flaticon.com/br/b
+
 ## 📋 Tecnologias utilizadas
 
 <div style="display: inline_block"><br>
