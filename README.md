@@ -30,7 +30,8 @@ O projeto é a conclusão de aprendizados do módulo V da RESÍLIA EDUCAÇÃO. N
 
 ## 📄 O Site
 
-![image](https://user-images.githubusercontent.com/89873481/176795603-441aec75-2dcb-4989-8e9f-b9e7280db6be.png)
+![image](https://user-images.githubusercontent.com/89873481/176795649-593978b3-3df9-409d-bff3-5fb3ab84d864.png)
+
 
 
 ## 📄 Versão Mobile
