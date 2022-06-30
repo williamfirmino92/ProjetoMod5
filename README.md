@@ -2,10 +2,11 @@
 
 # Projeto Resília - AutoResilia
 
-O projeto é a conclusão de aprendizados do módulo V da RESÍLIA EDUCAÇÃO. Nele, fomos orientados a estar desenvolvendo um site dinâmico completo de uma auto escola ficticia.
-
 
 ## 🚀 Finalidade
+
+O projeto é a conclusão de aprendizados do módulo V da RESÍLIA EDUCAÇÃO. Nele, fomos orientados a estar desenvolvendo um site dinâmico completo de uma auto escola ficticia utilizando a API que foi elaborada no módulo IV.
+
 
 ## 📦 Desenvolvimento
 
