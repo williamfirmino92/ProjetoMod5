@@ -18,7 +18,7 @@ import Vendas from './pages/Vendas/Vendas'
 function App() {
 	return (
 		<>
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<BrowserRouter>
 				<Header />
 				<Routes>
 					<Route path='/' element={<Home />} />
